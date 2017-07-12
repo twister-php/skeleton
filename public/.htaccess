@@ -1,0 +1,43 @@
+Order allow,deny
+Allow from all
+Require all granted
+
+SetEnv COMPUTERNAME demo
+
+Options -Indexes
+IndexIgnore */*
+
+php_value error_reporting -1
+php_flag display_errors On
+php_value max_execution_time 0
+php_value default_charset "utf-8"
+php_value session.use_trans_sid 0
+php_value session.gc_maxlifetime 1440
+php_value session.hash_function 0
+php_value session.hash_bits_per_character 4
+php_flag output_buffering Off
+php_flag zlib.output_compression On
+php_flag magic_quotes_gpc Off
+php_flag register_globals Off
+php_value sendmail_from no-reply@demo.com
+php_value memory_limit 64M
+php_value post_max_size 500M
+php_value upload_max_filesize 500M
+
+<Files *.log>
+	Order Deny,Allow
+	Deny from all
+</Files>
+
+<IfModule mod_headers.c>
+	Header unset ETag
+	<filesMatch "\.(js|css)$">
+		Header set Cache-Control "max-age=31536000, public"
+	</filesMatch>
+</IfModule>
+FileETag None
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /index.php [L]
