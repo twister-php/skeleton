@@ -3,7 +3,7 @@
 	"description": "Twister - PHP micro-framework skeleton",
 	"keywords": ["framework", "microframework", "rest", "router", "PHP"],
 	"type": "project",
-	"homepage": "https://github.com/twister-php/twister/",
+	"homepage": "https://github.com/twister-php/skeleton/",
 	"license": "MIT",
 	"authors": [
 		{
