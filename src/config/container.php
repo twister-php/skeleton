@@ -40,6 +40,7 @@ return	[
 								$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 							//	$whoops->pushHandler(new \Whoops\Handler\JsonResponseHandler);
 								$whoops->register();
+
 								$c->request->execute_route(require __DIR__ . '/routes.php');
 							},
 

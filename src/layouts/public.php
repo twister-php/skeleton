@@ -48,9 +48,15 @@ return function($response)
 				'<body>' .
 					'<div class="container">';
 
-						require __DIR__ . '/../elements/' . $response->elements['header']	. '/view.php';
-						require __DIR__ . '/../elements/' . $response->elements['content'] . '/view.php';
-						require __DIR__ . '/../elements/' . $response->elements['footer']	. '/view.php';
+					//	require __DIR__ . '/../elements/' . $response->elements['header']	. '/view.php';
+					//	require __DIR__ . '/../elements/' . $response->elements['content'] . '/view.php';
+					//	require __DIR__ . '/../elements/' . $response->elements['footer']	. '/view.php';
+
+						$path = $response->container->config['paths']['elements']; 
+
+						require $path . $response->elements['header']	. '/view.php';
+						require $path . $response->elements['content'] . '/view.php';
+						require $path . $response->elements['footer']	. '/view.php';
 
 						echo
 					'</div>' .
