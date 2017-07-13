@@ -16,6 +16,9 @@ return	[
 			'title'			=>	'Demo Application',
 			'lang'			=>	'en',
 			'languages'		=>	['en'],
+			'paths'			=>	[	'layouts'	=>	__DIR__ . '/../layouts/',
+									'elements'	=>	__DIR__ . '/../elements/'
+								],
 			'db'			=>	[	'host'		=>	'127.0.0.1',
 									'username'	=>	'root',
 									'password'	=>	'XR7mswQKfgsgdfhgregGEzAedxYUDqk6iHBCtI3pcN',

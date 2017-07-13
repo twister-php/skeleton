@@ -1,5 +1,7 @@
 <?php
 
+namespace Twister;
+
 /**
  *	Pre-configured default properties for the master Container
  *	This is the default property array of the main Container class. It features some common properties, object instances and factory methods.
@@ -38,7 +40,7 @@ return	[
 								$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 							//	$whoops->pushHandler(new \Whoops\Handler\JsonResponseHandler);
 								$whoops->register();
-								$c->request->execute_route();
+								$c->request->execute_route(require __DIR__ . '/routes.php');
 							},
 
 			'config'	=>	function($c)
@@ -95,5 +97,8 @@ return	[
 			'user'		=>	function($c)
 							{
 								return $c->user = new User($c);
-							}
+							},
+
+			'aliases'	=>	[	//'Twister\Container' => $this
+							]
 		];

@@ -1,5 +1,7 @@
 <?php	//	expressive, fast, flexible
 
+namespace Twister;
+
 return	[
 			'patterns'	=>	[	//	official named patterns
 								'alnum'		=>	'[A-Za-z0-9]',

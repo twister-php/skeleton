@@ -14,7 +14,8 @@
 	"require": {
 		"php": ">=5.4",
         "twister/twister": "*",
-		"filp/whoops": "^2.0@dev"
+		"filp/whoops": "^2.0@dev",
+		"symfony/var-dumper": "3.4.x-dev"
 	},
 	"minimum-stability": "dev"
 }
