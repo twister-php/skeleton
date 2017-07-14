@@ -1,6 +1,6 @@
 {
 	"name": "twister/skeleton",
-	"description": "Twister - PHP micro-framework skeleton",
+	"description": "Twister - micro-framework skeleton",
 	"keywords": ["framework", "microframework", "rest", "router", "PHP"],
 	"type": "project",
 	"homepage": "https://github.com/twister-php/skeleton/",
